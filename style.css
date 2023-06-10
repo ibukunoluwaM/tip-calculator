@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    width: 600px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.left {
+    width: 50%;
+    padding-right: 25px;
+}
+
+.left h2 {
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.input-field, .number-field{
+    background-color:  hsla(189, 14%, 56%, 0.295);
+    width: 100%;
+    height: 32px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-field input, .number-field input{
+    color: hsl(186, 14%, 43%);
+    font-size: 18px;
+    width: 100%;
+    background: transparent;
+    text-align: right;
+    outline: none;
+    border: none;
+}
+
+.input-field input::placeholder, .number-field input::placeholder {
+    font-size: 18px;
+}
+
+/* .input-field ~ .input-field input:active{
+    border: 1px solid hsl(186, 77%, 45%);
+
+} */
+
+
+.select h3 {
+    color: hsl(186, 14%, 43%);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.button-parent {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+}
+
+.button-parent button {
+    background-color: hsl(183, 100%, 15%);
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: 0.4s ease-in;
+}
+
+.button-parent button:hover, .right button:hover {
+    background-color: hsl(185, 72%, 62%);
+}
+
+.button-parent .grey {
+    color: hsl(186, 14%, 43%);
+    font-size: 14px;
+    width: 100%;
+    background: transparent;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+.button-parent .grey::placeholder {
+    padding-left: 12px;
+}
+.number-of-people h4 {
+    color: hsl(183, 100%, 15%);
+    margin-bottom: 5px;
+}
+
+.right {
+    width: 50%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.tips {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tip {
+    display: flex;
+    flex-direction: column;
+}
+
+.tip p {
+    color: hsl(184, 14%, 56%);
+}
+
+.tip p.tip-text {
+    color: hsl(0, 0%, 100%);
+}
+
+p.amount, p.amount-total {
+    color: hsl(172, 67%, 45%);
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.right button {
+    background-color: hsla(183, 98%, 22%, 0.808);
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+}
+
+.red {
+    color: red;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.no-of-persons-warn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.border {
+    border: 1px solid rgb(241, 34, 34);
+}
+
+.green-border {
+    border: 2px solid hsl(185, 72%, 62%);
+    border-radius: 3px;
+}
