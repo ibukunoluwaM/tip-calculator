@@ -32,6 +32,13 @@ main {
     color: hsl(186, 14%, 43%);
     margin-bottom: 8px;
     font-size: 15px;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 400;
+}
+
+.billInput {
+    height: 20px;
+    padding-bottom: 3px;
 }
 
 .input-field, .number-field{
@@ -52,6 +59,8 @@ main {
     text-align: right;
     outline: none;
     border: none;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
 }
 
 .input-field input::placeholder, .number-field input::placeholder {
@@ -68,6 +77,8 @@ main {
     color: hsl(186, 14%, 43%);
     font-size: 16px;
     margin-bottom: 10px;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
 }
 
 .button-parent {
@@ -87,6 +98,9 @@ main {
     color: hsl(0, 0%, 100%);
     cursor: pointer;
     transition: 0.4s ease-in;
+    border: none;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
 }
 
 .button-parent button:hover, .right button:hover {
@@ -101,13 +115,19 @@ main {
     text-align: center;
     outline: none;
     border: none;
+    border: none;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
 }
 .button-parent .grey::placeholder {
     padding-left: 12px;
+    font-weight: 700;
 }
 .number-of-people h4 {
-    color: hsl(183, 100%, 15%);
+    color: hsl(186, 14%, 43%);
     margin-bottom: 5px;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
 }
 
 .right {
@@ -131,6 +151,9 @@ main {
 
 .tip p {
     color: hsl(184, 14%, 56%);
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 .tip p.tip-text {
@@ -140,15 +163,19 @@ main {
 p.amount, p.amount-total {
     color: hsl(172, 67%, 45%);
     font-size: 2.2rem;
-    font-weight: 800;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
 }
 
 .right button {
     background-color: hsla(183, 98%, 22%, 0.808);
     outline: none;
     border: none;
+    color: hsl(180, 4%, 15%);
     width: 100%;
     padding: 10px;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
     margin-top: 50px;
     cursor: pointer;
     transition: 0.4s ease-in;

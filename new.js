@@ -1,11 +1,6 @@
 const form = document.querySelector("form");
 const percentButton = document.querySelectorAll(".percent");
 const buttonParent = document.querySelectorAll(".button-parent");
-const tip5Button = document.querySelector(".tip5");
-const tip10Button = document.querySelector(".tip10");
-const tip15Button = document.querySelector(".tip15");
-const tip25Button = document.querySelector(".tip25");
-const tip50Button = document.querySelector(".tip50");
 const tipAmount1 = document.querySelector(".amount");
 const tipAmountTotal = document.querySelector(".amount-total");
 const inputField = document.querySelector(".input-field");
@@ -54,13 +49,28 @@ function calculateTip(tPercent) {
       tipAmountTotal.innerHTML = "$" + "0.00";
       billInput.value = " ";
       noOfPersons.value = " ";
+      custom.placeholder = "Custom";
+      custom.value = "";
     });
   }
 }
 
+percentButton.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const tPercent = btn.getAttribute("value");
+    calculateTip(tPercent);
+  });
+});
+
+// timeout function
+
 function turnGreen() {}
 billInput.addEventListener("click", function () {
   inputField.classList.add("green-border");
+});
+
+billInput.addEventListener("focusout", function () {
+  inputField.classList.remove("green-border");
 });
 
 custom.addEventListener("click", function () {
@@ -68,28 +78,18 @@ custom.addEventListener("click", function () {
   custom.style.borderRadius = "5px";
 });
 
-tip5Button.addEventListener("click", function () {
-  calculateTip(0.05);
-});
-tip10Button.addEventListener("click", function () {
-  calculateTip(0.1);
-});
-tip15Button.addEventListener("click", function () {
-  calculateTip(0.15);
-});
-tip25Button.addEventListener("click", function () {
-  calculateTip(0.25);
-});
-tip50Button.addEventListener("click", function () {
-  calculateTip(0.5);
-});
-
-// custom
+// custom calculation
 custom.addEventListener("keyup", function (e) {
   custom.classList.add("green-border");
   if (e.keyCode === 13) {
     const customTip = Number(custom.value);
     let tPercent = customTip / 100;
     calculateTip(tPercent);
+    custom.style.border = "none";
   }
+});
+
+// to remove the custom's border on focusout.
+custom.addEventListener("focusout", function () {
+  custom.style.border = "none";
 });
